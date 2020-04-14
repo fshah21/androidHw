@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsImage"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/newsImage"
+        android:layout_toEndOf="@+id/newsImage">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearTitle">
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/newsTitle"
+            android:text="Title"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_empty_bookmark"
+            android:id="@+id/bookmark"
+            android:padding="0dp"
+            android:background="@color/white"
+            android:layout_toEndOf="@+id/newsTitle"
+            android:scaleType="fitXY"
+            style="@style/Widget.AppCompat.Button.Borderless"
+        />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newsDescription"
+            android:text="Description"
+            android:textSize="15dp"
+            android:textColor="#a9a9a9"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/linearTitle"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
